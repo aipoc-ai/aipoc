@@ -22,6 +22,7 @@ def alarm():
         hour = datetime.datetime.now().hour
         min = datetime.datetime.now().minute
         str_ = str(hour)+":"+str(min)
+        print(str_)
         if str_==timetable:
             playsound('1.mp3')
             sleep(0.5)
@@ -35,5 +36,5 @@ def alarm():
             playsound('1.mp3')
             sleep(120)
         sleep(30)
-set_alarm("13:38")
+set_alarm("11:6")
 alarm()
