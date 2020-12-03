@@ -16,3 +16,4 @@
 - [x] Colour detector
 - [x] wikipedia
 - [x] Play music
+- [ ] App
