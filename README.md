@@ -13,3 +13,6 @@
 - [x] Mail
 - [x] Face recognisation
 - [x] facebook post
+- [x] Colour detector
+- [x] wikipedia
+- [x] Play music
