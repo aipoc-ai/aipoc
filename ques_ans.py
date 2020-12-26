@@ -1,12 +1,11 @@
-import urllib, json
+import requests
 
 def get_ans(query):
     url = "http://deepprogrammer.pythonanywhere.com/ans/"+str(query)
 
-    response = urllib.request.urlopen(url)
+    response = requests.get(url)
 
-    data = json.loads(response.read())
+    data = response.json()
 
-    print(data)
+    return data['answer']+"."
 
-get_ans("what is gold")
