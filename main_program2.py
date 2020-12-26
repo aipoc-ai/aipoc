@@ -4,9 +4,10 @@ from time import sleep
 from ques_ans import get_ans
 from get_weather import get_weather
 from remove_stop_words import remove_words
+from basic_question import name_owner
 
 while True:
-    speak("Yes sir?")
+    speak("     Yes    sir?")
     x = command()
     #play music
     if ("play music" in x) or ("play song" in x):
@@ -23,13 +24,18 @@ while True:
                 speak("the temperature of "+str(city_name)+ "is "+str(temperature)+" at "+str(list_[0])+" and the weather is "+str(list_[1])+".")
             except:
                 speak("i don't understand the name of the city please ask again?")
+        elif ("my name" in x) or ("your ownwe" in x):
+            x = name_owner()
+            speak(x)
         else:
             speak(get_ans(x))
 
     elif "sleep" in x:
         sleep(60)
+
     elif x in "exit":
         break
+    
     elif x in "exit":
         break
     elif x in "exit":
