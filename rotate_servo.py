@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-servoPIN = 25
+servoPIN = 16
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(servoPIN, GPIO.OUT)
 
@@ -13,10 +13,31 @@ try:
     time.sleep(0.5)
     p.ChangeDutyCycle(5)
     time.sleep(0.5)
-    p.ChangeDutyCycle(7.5)
+    p.ChangeDutyCycle(6)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(7)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(7.5) #mid
+    time.sleep(0.5)
+    p.ChangeDutyCycle(8)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(9)
     time.sleep(0.5)
     p.ChangeDutyCycle(10)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(9)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(8)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(7) #mid
+    time.sleep(0.5)
+    p.ChangeDutyCycle(6)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(5)
+    time.sleep(0.5)
+    p.ChangeDutyCycle(4)
     time.sleep(0.5)
 except KeyboardInterrupt:
   p.stop()
   GPIO.cleanup()
+
