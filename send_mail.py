@@ -1,12 +1,11 @@
 import smtplib, ssl
-from text_to_voice import speak,command
+from main_program import speak,command
 
 def mail():
-    speak("Who do you want to mail?")
+    speak("Whom do you want to mail?")
     while True:
         receiver_name = command()
         speak("you said"+receiver_name+"."+"is it ok")
-        speak("Iss it okk")
         permission = command()
         if "yes" in permission:
             break
@@ -22,11 +21,11 @@ def mail():
         else:
             speak("say again receiver name") 
 
-    sender_mail = "email"
-    passw = "password"   
+    sender_mail = "rootaccess369@gmail.com"
+    passw = "****"   
     s = smtplib.SMTP('smtp.gmail.com', 587) 
     s.starttls() 
     s.login(sender_mail, passw) 
-    s.sendmail(sender_mail,"abhishek.sharmar112@gmail.com", message) 
+    s.sendmail(sender_mail,receiver_name, message) 
     s.quit() 
-    speak("mail send")
+    speak("mail sended")

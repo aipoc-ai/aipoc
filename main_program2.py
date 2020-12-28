@@ -6,17 +6,21 @@ from get_weather import get_weather
 from remove_stop_words import remove_words
 from basic_question import name_owner
 from send_mail import mail
-
 while True:
     try:
-        speak2("hello i am aipoc")
         speak2("     Yes    sir?")
         x = command()
+        x = x.lower()
         #play music
         if ("play music" in x) or ("play song" in x):
             speak2("please tell me song?")
             query = command()
             t = play_music_func(query)
+        elif "play" in x:
+            music = list(x.split(' '))
+            music.remove("play")
+            t = play_music_func(" ".join(music))
+
         
         #get ans
         elif list(x.split(' '))[0] in ['what','who','tell','whose']:
