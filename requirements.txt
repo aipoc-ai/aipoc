@@ -1,7 +1,7 @@
 python-vlc
 SpeechRecognition
 wikipedia
-payfy
+pafy
 pyttsx3
 pyautogui
 selenium

@@ -43,5 +43,5 @@ def rotate_l(x):
     sleep(x)
     GPIO.cleanup()
 
-
+forward(2)
 
