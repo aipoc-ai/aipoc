@@ -1,0 +1,9 @@
+python-vlc
+SpeechRecognition
+wikipedia
+payfy
+pyttsx3
+pyautogui
+selenium
+playsound
+pillow
