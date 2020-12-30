@@ -7,3 +7,7 @@ pyautogui
 selenium
 playsound
 pillow
+gtts
+youtube-dl
+
+##FLAC for os

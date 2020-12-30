@@ -15,7 +15,7 @@ def play_music_func(query):
 
 
 
-    cmd = 'pythonw play_spotify.py'
+    cmd = 'python3 play_spotify.py'
 
-    p= subprocess.Popen(cmd)
+    p= subprocess.Popen(cmd,shell=True)
     return p
