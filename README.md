@@ -16,4 +16,5 @@
 - [x] Colour detector
 - [x] wikipedia
 - [x] Play music
-- [ ] App
+- [x] Web App
+- [x] Web API
