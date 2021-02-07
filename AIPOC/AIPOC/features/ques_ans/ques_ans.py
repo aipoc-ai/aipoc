@@ -1,7 +1,7 @@
 import requests
 
 def get_ans(query):
-    url = "http://deepprogrammer.pythonanywhere.com/ans/"+str(query)
+    url = "https://flaskapp955.herokuapp.com/ans/"+str(query)
 
     response = requests.get(url)
 
