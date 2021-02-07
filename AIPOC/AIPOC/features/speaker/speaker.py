@@ -1,11 +1,8 @@
 from gtts import gTTS
-import playsound
-import pyttsx3
 import speech_recognition as sr
 import os
 from time import sleep
 import pygame
-from play_audio import play_music_func
 
 def speak(text):
     txt = gTTS(text = text,lang="en")
@@ -13,7 +10,7 @@ def speak(text):
     txt.save(file_name)
 
     pygame.mixer.init()
-    pygame.mixer.music.load("myFile.wav")
+    pygame.mixer.music.load("voice.mp3")
     pygame.mixer.music.play()
     while pygame.mixer.music.get_busy() == True:
         continue
