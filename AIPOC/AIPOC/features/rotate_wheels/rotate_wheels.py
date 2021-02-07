@@ -1,47 +1,47 @@
 import RPi.GPIO as GPIO          
 from time import sleep
 
-in1 = 24
-in2 = 23
-in3=  14
-in4= 18
-en = 23
+in1 = 25
+in2 = 14
+in3=  22
+in4= 23
 
 def forward(x):
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(14,GPIO.OUT)
-    GPIO.setup(18,GPIO.OUT)    
-    GPIO.output(14,GPIO.HIGH)
-    GPIO.output(18,GPIO.HIGH)
+    GPIO.setup(in1,GPIO.OUT)
+    GPIO.setup(in4,GPIO.OUT)    
+    GPIO.output(in1,GPIO.HIGH)
+    GPIO.output(in4,GPIO.HIGH)
     sleep(x)
     GPIO.cleanup()
     
 def backward(x):
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(23,GPIO.OUT)
-    GPIO.setup(24,GPIO.OUT)
-    GPIO.output(23,True)
-    GPIO.output(24,True)
+    GPIO.setup(in2,GPIO.OUT)
+    GPIO.setup(in3,GPIO.OUT)
+    GPIO.output(in2,True)
+    GPIO.output(in3,True)
     sleep(x)
     GPIO.cleanup()
 
 def rotate_r(x):
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(23,GPIO.OUT)
-    GPIO.setup(18,GPIO.OUT)
-    GPIO.output(23,True)
-    GPIO.output(18,True)
+    GPIO.setup(in1,GPIO.OUT)
+    GPIO.setup(in3,GPIO.OUT)
+    GPIO.output(in1,True)
+    GPIO.output(in3,True)
     sleep(x)
     GPIO.cleanup()
 
 def rotate_l(x):
     GPIO.setmode(GPIO.BCM)
-    GPIO.setup(24,GPIO.OUT)
-    GPIO.setup(14,GPIO.OUT)
-    GPIO.output(24,GPIO.HIGH)
-    GPIO.output(14,GPIO.HIGH)
+    GPIO.setup(in4,GPIO.OUT)
+    GPIO.setup(in2,GPIO.OUT)
+    GPIO.output(in4,GPIO.HIGH)
+    GPIO.output(in2,GPIO.HIGH)
     sleep(x)
     GPIO.cleanup()
 
-forward(2)
+
+
 
