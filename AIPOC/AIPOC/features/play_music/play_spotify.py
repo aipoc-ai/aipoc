@@ -1,7 +1,7 @@
 import vlc 
 from time import sleep
 import pafy 
-from search_youtube import search
+from search_youtube.search_youtube import search
 
 with open('audio_query.txt','r') as fb:
         query=fb.readline()

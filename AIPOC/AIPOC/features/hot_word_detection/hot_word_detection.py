@@ -25,7 +25,7 @@ def hot_word_detection(lang='en'):
         status, command
     """
 
-    bot_name = ["ipog","poke","i pok","epoch","iphone","i pop","pok","pop","ipod","ipop"]
+    bot_name = ["ipog","poke","i pok","epoch","iphone","i pop","pok","pop","ipod","ipop","oppo"]
 
     while(True):
         try:

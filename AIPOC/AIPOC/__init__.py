@@ -4,6 +4,7 @@ import features.get_weather.get_weather as weather
 import features.ques_ans.ques_ans as give_ans
 import features.basic_ques.basic_question as info
 import features.remove_stopwords.remove_stop_words as words
+import features.play_music.play_audio as play_song
 
 class AIPOCAI:
     def __init__(self):
@@ -44,7 +45,19 @@ while(True):
             else:
                 speaker.speak(give_ans.get_ans(query))
 
+        if ("play music" in query) or ("play song" in query):
+            speaker.speak("please tell me song?")
+            query = speaker.command()
+            t = play_song.play_music_func(query)
+        elif "play" in query:
+            music = list(query.split(' '))
+            music.remove("play")
+            t = play_song.play_music_func(" ".join(music))
+        elif ("stop music" in query) or ("stop song" in query):
+            try:
+                t.kill()
+            except:
+                speaker.speak("no music is playing. I can play music for you only you have to say play music aipoc")
 
         
 
-66
